@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.hexflake.rajutaskevince.database.UserModel" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.screens.DetailsActivity">
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:image="@{model.avatar}"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download Image"
+            android:id="@+id/download"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="Dummy text"
+            android:paddingHorizontal="20dp"
+            app:setUserInfo="@{model}" />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete User"
+            android:id="@+id/deleteuser"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update User"
+            android:id="@+id/update"
+            />
+
+    </LinearLayout>
+</layout>
